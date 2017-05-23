@@ -1,0 +1,22 @@
+#fix dupes
+dupefix: true
+#notify or not alert to the console attempts to Dupe
+duptocons: true
+#Disable or no notification attempts Dupe plant pot(greay flood)
+dupepot: false
+#DUP sending cargo trucks or donkey to hell
+nportal: true
+# DUP plants with a pot
+bpot: true
+# DUP from getting stuck in the trolley
+dupsit: true
+# with some items you can not interact sitting
+nositint: [54, 61, 62, 130, 138, 146, 154, 158, 23, 142, 143, 408]
+# DUP explosion chest
+exchest: true
+# when you try to cancel the explosion blocks any explosion
+remtiles: [23, 54, 61, 62, 138, 146, 154, 158]
+#delete the endless objects (the number of buggy)
+reminf: true
+#DUP shift rails piston
+railfix: true

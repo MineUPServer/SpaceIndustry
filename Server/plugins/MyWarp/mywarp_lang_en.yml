@@ -1,0 +1,198 @@
+# This file MUST be encoded with 'UTF-8' or special characters will not be displayed correctly.
+# On Windows you MUST NOT use the preinstalled Notepad, but a program like Notepad++ (www.notepad-plus-plus.org) to edit the file.
+commands:
+  accept:
+    accepted-successful: '&bТеперь вы владелец ''''{0}''''.'
+    description: Принять варп от другого игрока.
+    nothing-to-accept: Этого варпа нет,принять не сможете.
+  assets:
+    description: Список всех варпов [player] вместе с соответствующим лимитом.
+    heading: '{0}''Варпы'
+    total-warps: '&7Варпы в {0} ({1}):'
+    public-warps: Пуьличные Варпы ({0}):&f&o {1}
+    private-warps: Приватные Варпы ({0}):&f&o {1}
+  create:
+    created-successful: |
+      &bSuccessfully created ''{0}''.
+      &fIf you''d like to privatize it, use: &c/warp private {0}&f.
+    description: Создание нового публичного варпа &7<name>&f в твоей локации.
+  create-private:
+    created-successful: |
+      &bSuccessfully created ''{0}''.
+      &fIf you''d like to invite other players to it, use: &c/warp invite <player> {0}&f.
+    description: Создание нового Приватного варпа &7<name>&f в твоей локации.
+  delete:
+    deleted-successful: '&bВы удалили ''''{0}''''.'
+    description: Удаляет Варп &7<name>.
+  give:
+    asked-successful: '&bТы попросил {0} принять ''''{1}'''' и стать владельцем.'
+    description: Дает вашему Варпу &7<name>&f для &7<player>&f. Пишем [-d] дать Варп и [-f] чтобы игнорировать лимит (Если ВКЛ).
+    givee-limits: '{0} Превысил лимит Владений. Игрок должен удалить один варп,чтобы
+      получить новый.'
+    givee-message: '&b{0} хочет, чтобы дать вам ''''{1}''''. Напишите ''&f/warp accept&b''
+      Чтобы &fПринять.'
+    given-successful: '&bВы дали ''''{0}'''' to {1}.'
+    is-owner: '{0} уже владелец Варпа.'
+  help:
+    description: Отображает справку в меню.
+    heading: Помощь
+    note: Напишите '/<command> -?' чтобы получить больше информации.
+  import:
+    description: Импорт варпов &7<SQLite|MySQL>&f в текущую базу данных. Существующие Варпы не будут перезаписаны, если [-f] используется.
+    import-successful: '&b{0,choice,0#No warps were|1#One warp was|1<{0,number,integer}
+      warps were} imported.'
+    import-with-skips: '&b{0,choice,0#No warps were|1# One warp was|1< {0,number,integer}
+      warps were} imported, but {1,choice,1#one warp was|1<{1,number,integer} warps
+      were} skipped:&f'
+    invalid-option: '{0} is not a valid import option.'
+    no-connection: 'Could not establish database connection in order to import warps:'
+  invalid-number: You need to enter a valid number. Check &f/{0} -?&c for more information.
+  invite:
+    description: Приглашает &7<player|group>&f до &7<name>.
+    group:
+      already-invited: Группа ''{0}'' уже приглашена в этом Варпе.
+      private: '&bВы пригласили в группу {0} с ''''{1}''''.'
+      public: '&bВы пригласили в группу {0} с ''''{1}''''. Но ''''{1}'''' все ещё
+        публичный Варп.'
+    player:
+      already-invited: '{0} Уже приглашены на этот Варп.'
+      is-creator: '{0} Это создатель, он пригласил.'
+      player-invited: '&b{0} пригласил вас, чтобы ''''{1}''''. Напишите &f''''/warp
+        {1}'''' &bдля Варпа.'
+      private: '&bВы пригласили {0} в ''''{1}''''.'
+      public: '&bВы пригласили {0} в ''''{1}''''. Но ''''{1}'''' все ещё публичный
+        Варп.'
+  info:
+    created-by: 'Создан:'
+    created-by-you: (что это вы!)
+    description: Дает вам все доступные сведения о &7<name>.
+    heading: 'Информация о ''''{0}'''':'
+    invited-groups: 'Приглашенные группы:'
+    invited-players: 'Приглашенные игроки:'
+    in-world: (в ''{0}'')
+    location: 'Локация:'
+    visits: 'Визитов:'
+  library:
+    flag-already-set: Значение флага ''{0}'' уже назначено.
+    flag-no-value: Не было указано значение для ''{0}'' Флага.
+    invalid-sender: 'Не удалось выполнить команду: invalid sender.'
+    too-few-args: Слишком мало аргументов.
+    too-many-args: Слишком много аргументов.
+    unknown-exception: Произошла внутренняя ошибка при выполнении этой команды.
+    unknown-flag: 'Неизвестный флаг:'
+  list:
+    by: by
+    description: Список всех Варпов, вы можете посетить. Напишите [-c creator] Список Варпов Данного создателя и [-w world] список Варпов данного мира только. Если должны быть перечислены по популярности, Пишите [-p].
+    heading: Варпы
+    you: ты
+  modify-permission: У вас нет разрешения на изменение ''{0}''.
+  point:
+    description: Точками вашего компаса &7[name]&f. Если вы хотите сбросить компас, просто используйте эту команду без указания warp.
+    reset: '&bВаш компас теперь снова указывает на точке респауна.'
+    set: '&bТвой компас теперь поможет ''''{0}''''.'
+  private:
+    already-private: '''''{0}'''' Уже Приватный.'
+    description: Делает &7<name>&f Приват.
+    privatized: |
+      &bYou have privatized ''{0}''.
+      &fIf you'd like to invite others to it, use: &c/warp invite <player> {0}
+  public:
+    already-public: '''''{0}'''' Уже Публичный.'
+    description: Делает &7<name>&f общедоступным.
+    publicized: '&bТы рекламируешь ''''{0}''''.'
+  reload:
+    description: Перезагружает конфигурацию с диска.
+    reload-message: '&bКонфигурация была успешно перезагружена!'
+  search:
+    description: Поиск варпов при заданных &7<name>&f. Пишите [-p] если Варп должен быть в списке по популярности.
+    exact-heading: точное совпадение
+    heading: 'Матчи для поиска ''''&f{0}&6'''':'
+    no-matches: '&cНет матчей для ''''&f{0}''''&c.'
+    partital-heading: неполный {0,choice,1#match|1<matches ({0, number})}
+  uninvite:
+    description: Расформирован &7<player|group>&f для &7<name>.
+    group:
+      not-invited: Группа ''{0}'' Не приглашают в этот Варп.
+      private: '&bТы Расформировал группу {0} для ''''{1}''''.'
+      public: '&bТы Расформировал группу {0} для ''''{1}''''. но ''''{1}'''' он остался
+        Публичным.'
+    player:
+      is-creator: Вы не можете отменить приглашение создателя.
+      not-invited: '{0} Не приглашают в этот Варп.'
+      player-uninvited: '&bВы не приглашены ''''{0}''''. Извините.'
+      private: '&bВы имеете незваный {0} для ''''{1}''''.'
+      public: '&bВы имеете незваный {0} для ''''{1}''''. но ''''{1}'''' он остался
+        Публичным.'
+  update:
+    description: Обновлено &7<name>&f ваше текущее местоположение
+    update-successful: '&bВы обновили {0}''позицию.'
+  usage:
+    creator: создатель
+    group: группа
+    name: имя
+    player: Игрок
+    world: мир
+  utils:
+    player-offline: Не мог найти игрока по имени ''{0}''. Он онлайн?
+    limit-reached:
+      private: |
+        You have reached your maximum of private warps &e({0, number, integer})&c.
+        &fDelete some of your warps to create more.
+      public: |
+        You have reached your maximum of public warps &e({0, number, integer})&c.
+        &fDelete some of your warps to create more.
+      total: |
+        You have reached your maximum of warps &e({0, number, integer})&c.
+        &fDelete some of your warps to create more.
+    name-is-cmd: '''''&f{0}&c'''' эквивалентно команде и не может использоваться в
+      качестве имени.'
+    warp-exists: Имя Варпа ''&f{0}&c'' уже существует.
+    warp-non-existent: Нет такого Варпа ''{0}''.
+    warp-suggestion: Нет такого Варпа ''{0}''. Ты имел в виду ''&f{1}&c''?
+  use-permission: Вы не имеете разрешения для использования этой команды.
+  warp-to:
+    cooldown:
+      active: '&cВам нужно подождать еще {0,number} секунд, прежде чем повторить снова.'
+      ended: '&bВы остыли, не стесняйтесь использовать &f/warp &bagain.'
+    description: Твой варп &7<name>&f, вы можете посетить его.
+    warmup:
+      active: '&cВам нужно подождать еще {0,number} секунд, прежде чем вы телепортироваться.'
+      cancelled-damage: '&cВы не должны принимать урон. Ваше действие было отменено.'
+      cancelled-move: '&cВы не должны двигаться. Ваши действие было отменено.'
+      started: '&bВы будете телепортированы ''''{0}'''' в {1,number} Секунд.'
+  warp-player:
+    description: Варп &7<player>&f для &7<name>&f если вы можете посетить его.
+    teleport-successful: '&bВы были телепортированы {0} в ''''{1}''''.'
+  welcome:
+    changed-successful: |
+      &bChanged welcome message for ''{0}'' to:
+      &7&o{1}
+    description: Изменени приветственное сообщение &7<name>&f.
+    enter: |
+      &bEnter the new welcome message for ''{0}''.
+      &fUse ''&7#none&f'' to disable it and ''&7#cancel&f'' to abort.
+    removed-successful: '&bВы удалили сообщение с приветствием от ''''{0}''''.'
+dynmap:
+  marker: <b>%warp%</b></br><i>Созданные %creator%</i>
+economy:
+  cannot-afford: Вы не можете себе это позволить. Вам нужно по крайней мере {0, number}$.
+  transaction-complete: '&bВы были обвинены {0, number}$.'
+  unknown-exception: Транзакция не может быть завершена.
+lister:
+  page: страница
+  unknown-page: там {0,choice,1#is only one page|1<are only {0, number, integer} pages} в итоге.
+  no-results: Нет результатов матча!
+warp:
+  default-welcome-message: Добро пожаловать на '%warp%', %player%.
+  unsafe-loc:
+    closest-location: '&cВарп ''''{0}'''' - это не безопасно. Вы были телепортированы
+      в ближайшее безопасное место.'
+    no-teleport: '&cВарп ''''{0}'''' это не безопасно. Нет безопасном месте мог бы
+      быть найден .'
+  world-non-existing: '&cМир ''''&f{0}&c'''' не существует.'
+warp-signs:
+  created-successful: '&bУспешно создана Варп надпись.'
+  created-permission: '&cТы не имеешь на это прав.'
+  create-warp-permission: '&cУ вас нет разрешения, чтобы создать Варп надпись ''''{0}''''.'
+  use-permission: '&cУ вас нет разрешения использовать это'
+  use-warp-permission: '&cВы не имеете разрешения ''''{0}''''.'

@@ -1,0 +1,65 @@
+groups:
+  Player:
+    default: true
+    permissions:
+    - chatex.allowchat
+    - chatex.chat.global
+    - myhome.user
+    - myhome.econ.free.*
+    - worldedit.selection.*
+    - worldedit.wand
+    - worldedit.wand.toggle
+    - worldedit.selection.size
+    - worldguard.region.redefine.own.*
+    - worldguard.region.claim
+    - worldguard.region.select.own.*
+    - worldguard.region.info.*
+    - worldguard.region.addowner.own.*
+    - worldguard.region.removeowner.own.*
+    - worldguard.region.addmember.own.*
+    - worldguard.region.removemember.own.*
+    - worldguard.region.list.own
+    - worldguard.region.teleport.own.*
+    - worldguard.region.setpriority.own.*
+    - worldguard.region.setparent.own.*
+    - worldguard.region.remove.own.*
+    - worldguard.region.wand
+    - essentials.kit
+    - essentials.kits.noob
+    - essentials.afk
+    - essentials.compass
+    - essentials.ignore
+    - essentials.help
+    - essentials.info
+    - essentials.mail
+    - essentials.mail.send
+    - essentials.me
+    - essentials.rules
+    - essentials.suicide
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.tptoggle
+    - spawntp.spawn
+    options:
+      prefix: '&a[Игрок]'
+      suffix: '&7: &r'
+  Owner:
+    default: false
+    permissions:
+    - '*'
+    options:
+      prefix: '&a[&bOwner&a]'
+      suffix: '&7: &r'
+users:
+  e0b8201a-2ca3-39c9-bcc1-4e4d2b4bb277:
+    permissions:
+    - Owner
+    - '*'
+    options:
+      name: BrightYC
+    group:
+    - Owner
+  a5dfa7dc-2b61-3639-9127-af17ae8e0cc4:
+    permissions:
+    - '*'

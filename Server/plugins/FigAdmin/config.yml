@@ -1,0 +1,43 @@
+mysql: false
+mysql-database: jdbc:mysql://localhost:3306/minecraft
+mysql-user: root
+mysql-password: root
+mysql-table: banlist
+auto-complete: true
+ip-ban: false
+bans-to-banned-players: false
+auto-ban-on-warnings: -1
+auto-ban-time: 1 day
+messages:
+  banMsgFailed: '&cPlayer &e%victim% &cis already banned!'
+  unbanMsg: '&aУспешно разбаненный игрок &e%victim%&a!'
+  unbanMsgGlobal: '&e%victim% &6разбанен &e%player%&6!'
+  unbanMsgFailed: '&cНе получилось разбанить &e%victim%&c!'
+  kickAllMsg: '%player% кикнут. Причина: %reason%'
+  kickDefaultReason: '&eИгрок кикнут!'
+  kickGobalDefaultRason: '&eГлобальный кик'
+  kickMsgVictim: '&cВы были кикнуты %player%. Причина: %reason%'
+  kickMsgBroadcast: '&e%victim% &6кикнул &e%player%&6. Причина: &e%reason%'
+  kickMsgFailed: '&cНе удалось кикнуть: &6%victim% &cИгрок оффлайн.'
+  banMsgVictim: '&eВы забанены игроком &e%player%&f.&6 Причина: %reason%'
+  banMsgBroadcast: '&e%victim% &6игрок забанен &e%player%&f.&6 Причина: &e%reason%'
+  banDefaultReason: '&eЗабанен банхаммером!'
+  banOffline: '&eОшибка: &8Игрок &a%player%&8 сейчас не на сервере.'
+  tempbanMsgVictim: 'Вы забанены навсегда. Вы были забанены %player%. Причина: %reason%'
+  tempbanMsgBroadcast: '&e%victim% забанен&6. Забанен игроком &e%player%&6. Причина:
+    &e%reason%'
+  LoginTempban: '&cВы забанены до &e%time%&c! Причина: &e%reason%'
+  LoginBan: '&cВы были забанены на этом сервере! Причина: &e%reason%'
+  LoginIPBan: '&cЭтот IP-адрес забанен!'
+  badPlayerName: '&cНеправильный ник!'
+  playerNotOnline: '&cИгрок &e%player% &сейчас не онлайн.'
+  warnMsgBroadcast: '&cИгроку &e%player%&f кинул варн&c%kicker%&f:'
+  warnMsgVictim: '&cВы получили варн от &c%player%&f:'
+  reloadMsg: '&aПерезагрузка FigAdmin.'
+  exportMsg: '&aЗагрузка банлиста в файл banlist.txt'
+  playerBanned: '&cИгрок %player% забанен.'
+  playerNotBanned: '&aИгрок %player% не забанен.'
+  ipBan: '&eЭтот IP адрес забанен!'
+  noPermission: '&cУ вас нет прав на это(Кек).'
+  warnDeleted: '&aВсе %number% варны сняты игроку &e%player%&a.'
+  warnNone: '&cНету варнов данному игроку &e%player%&c!'
